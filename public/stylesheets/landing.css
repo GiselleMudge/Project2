@@ -1,10 +1,11 @@
-    body {
-    background-size: cover;
-    background-position: center; 
-    transition: background 1.5s linear;
-    -webkit-backface-visibility: hidden;
-    webkit-transition: background-image 1.5s linear;
-    -webkit-transform:translate3d(0,0,0);
+body {
+background-image:url(https://images.unsplash.com/photo-1458442310124-dde6edb43d10?dpr=2&fit=crop&fm=jpg&h=825&ixlib=rb-0.3.5&q=50&w=1450);
+background-size: cover;
+background-position: center; 
+transition: background 1.5s linear;
+-webkit-backface-visibility: hidden;
+webkit-transition: background-image 1.5s linear;
+-webkit-transform:translate3d(0,0,0);
 }
 
 .navbar-default {
