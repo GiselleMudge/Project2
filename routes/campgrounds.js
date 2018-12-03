@@ -19,11 +19,13 @@ var imageFilter = function (req, file, cb) {
 var upload = multer({ storage: storage, fileFilter: imageFilter})
 
 var cloudinary = require('cloudinary');
+if (!process.env.CLOUDINARY_URL) {
 cloudinary.config({ 
   cloud_name: 'hdga7dx0l', 
   api_key: process.env.CLOUDINARY_API_KEY, 
   api_secret: process.env.CLOUDINARY_API_SECRET
 });
+}
 
 //INDEX - show all destination
 router.get("/", function(req, res){
