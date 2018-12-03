@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv').config();
 
 var express     = require("express"),
     app         = express(),
@@ -19,8 +19,21 @@ var express     = require("express"),
 var commentRoutes    = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes      = require("./routes/index")
-    
-mongoose.connect("mongodb://localhost/jemsv2");
+
+var mongodbUri = `mongodb://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_SERVER}`;
+mongoose.connect(mongodbUri, {
+    useNewUrlParser: true,
+    auth: {
+      user: 'UserName',
+      password: 'Password'
+    }
+  })
+  var conn = mongoose.connection;    
+  conn.on('error', console.error.bind(console, 'connection error:'));  
+   
+  conn.once('open', () =>{
+   console.log('connected to adatabase')                       
+  });
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));

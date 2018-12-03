@@ -25,9 +25,9 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET
 });
 
-//INDEX - show all campgrounds
+//INDEX - show all destination
 router.get("/", function(req, res){
-    // Get all campgrounds from DB
+    // Get all destinations from DB
     Campground.find({}, function(err, allCampgrounds){
        if(err){
            console.log(err);
@@ -37,10 +37,10 @@ router.get("/", function(req, res){
                 console.log(body); // Show the HTML for the Modulus homepage.
                 res.render("campgrounds/index",{campgrounds:allCampgrounds});
 
-            }
-});
-       }
-    });
+                    }
+                });
+                }
+            });
 });
 
 //CREATE - add new campground to DB
