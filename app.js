@@ -20,7 +20,7 @@ var commentRoutes    = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes      = require("./routes/index")
 
-var mongodbUri = `mongodb://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_SERVER}`;
+var mongodbUri = process.env.MONGODB_PUCE_URI || "mongodb://ds123834.mlab.com:23834/heroku_5fz3v9vh";
 mongoose.connect(mongodbUri, {
   useMongoClient: true
   });
