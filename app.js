@@ -20,7 +20,7 @@ var commentRoutes    = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes      = require("./routes/index")
 
-var mongodbUri = process.env.MONGODB_PUCE_URI || "mongodb://ds123834.mlab.com:23834/heroku_5fz3v9vh";
+var mongodbUri = process.env.MONGODB_URI || "mongodb://localhost/jemsproject2";
 mongoose.connect(mongodbUri, {
   useMongoClient: true
   });
