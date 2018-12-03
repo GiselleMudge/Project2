@@ -22,12 +22,8 @@ var commentRoutes    = require("./routes/comments"),
 
 var mongodbUri = `mongodb://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_SERVER}`;
 mongoose.connect(mongodbUri, {
-    useNewUrlParser: true,
-    auth: {
-      user: 'UserName',
-      password: 'Password'
-    }
-  })
+  useMongoClient: true
+  });
   var conn = mongoose.connection;    
   conn.on('error', console.error.bind(console, 'connection error:'));  
    
