@@ -12,6 +12,7 @@ webkit-transition: background-image 1.5s linear;
     color: black;
     background-image: url('https://res.cloudinary.com/dlrjbrmlg/image/upload/v1543909703/BLlogo.png');
     background-position: center; 
+    max-height: 100%;
 }
 
 .bg {
