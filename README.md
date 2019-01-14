@@ -1,6 +1,9 @@
 # Project2: BucketList
 2nd Home for Team JEMS repo
 
+### Our Team
+![image](https://user-images.githubusercontent.com/41309640/51102693-f5ac4680-17ad-11e9-8de4-682f702a3baf.png)
+
 ### Overview
 
 Access here -->  http://project2jems.herokuapp.com/
