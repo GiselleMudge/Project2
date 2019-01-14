@@ -23,7 +23,7 @@ Success!
 ![image](https://user-images.githubusercontent.com/41309640/51102517-4bccba00-17ad-11e9-94b6-c0d81813c793.png)
 
 ### In Progress
-1.  Upvotes (Decided no on Downvotes, counterintuitive to purpose and tone of site)
+1.  Upvotes (Decided no on Downvotes, counterproductive to purpose and tone of site)
 
 2.  Add Share button
 
